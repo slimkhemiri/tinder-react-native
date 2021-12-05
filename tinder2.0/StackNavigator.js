@@ -1,18 +1,23 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import React from 'react'
-
-import ChatScreen from './screens/ChatScreen'
-import HomeScreen from './screens/HomeScreen'
-const Stack = createNativeStackNavigator()
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
+import LoginScreen from "./screens/LoginScreen";
+import ChatScreen from "./screens/ChatScreen";
+import HomeScreen from "./screens/HomeScreen";
+const Stack = createNativeStackNavigator();
 const StackNavigator = () => {
-    return (
-   
-        <Stack.Navigator>
+  const user = false;
+  return (
+    <Stack.Navigator>
+      {user ? (
+        <>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Chat" component={ChatScreen} />
-        </Stack.Navigator>
-     
-    )
-}
+        </>
+      ) : (
+        <Stack.Screen name="Login" component={LoginScreen} />
+      )}
+    </Stack.Navigator>
+  );
+};
 
-export default StackNavigator
+export default StackNavigator;

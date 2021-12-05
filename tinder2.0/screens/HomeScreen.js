@@ -1,10 +1,13 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import {useNavigation} from '@react-navigation/core'
+import { View, Text, Button } from 'react-native'
 
 const HomeScreen = () => {
+    const navigation = useNavigation()
     return (
         <View>
             <Text>tindeeeeeeeer</Text>
+            <Button title='Go to chat' onPress={()=>{navigation.navigate("Chat")}} />
         </View>
     )
 }
