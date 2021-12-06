@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tinder2.0",
-    "slug": "tinder2.0",
+    "name": "tinder2",
+    "slug": "tinder2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
